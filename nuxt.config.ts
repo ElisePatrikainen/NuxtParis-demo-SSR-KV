@@ -11,9 +11,6 @@ export default defineNuxtConfig({
     // Development
     devStorage: {
       'db': { driver: 'fs', base: './data/db' }
-    },
-    plugins: [
-      './server/plugins/seed'
-    ]
+    }
   }
 })

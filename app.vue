@@ -5,15 +5,20 @@ const newTodo = ref();
 
 const { data: items, refresh } = await useFetch("/api/items");
 
-const addTodo = () => {
-  $fetch("/api/todo", {
-    method: "POST",
-    body: {
-      value: newTodo.value,
-    },
-  });
-  refresh();
-};
+const seedDB = async () => {
+  await $fetch('/api/seed')
+  await refresh()
+}
+
+// const addTodo = () => {
+//   $fetch("/api/todo", {
+//     method: "POST",
+//     body: {
+//       value: newTodo.value,
+//     },
+//   });
+//   refresh();
+// };
 </script>
 
 <template>
@@ -29,6 +34,9 @@ const addTodo = () => {
       <div class="-mx-4 flex flex-wrap">
         <Item v-for="item in items" :key="name" :item="item" />
       </div>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  v-if="!items.length" @click="seedDB">
+        Seed Database
+      </button>
     </div>
   </section>
   <TheFooter />

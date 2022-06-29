@@ -9,3 +9,4 @@ dist
 .env
 wrangler.toml
 data/db
+data/kv

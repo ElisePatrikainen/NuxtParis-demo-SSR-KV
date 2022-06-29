@@ -11,7 +11,6 @@ export default defineEventHandler(async (event) => {
   await storage.setItem(`db:items:${item.id}`, item)
 
   return {
-    status: 201,
-    response: item
+    item
   }
 })
