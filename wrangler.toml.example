@@ -1,0 +1,20 @@
+name = "kv-todo"
+type = "javascript"
+account_id = "<your account ID>"
+workers_dev = true
+compatibility_date = "2022-04-07"
+
+kv_namespaces = [
+  { binding = "<any name>", id = "<your KV namespace ID>" }
+]
+
+[site]
+bucket = ".output/public"
+entry-point = ".output"
+
+[vars]
+CLOUDFLARE_ENV = "production"
+
+[build]
+command = ""
+upload.format = "service-worker"
