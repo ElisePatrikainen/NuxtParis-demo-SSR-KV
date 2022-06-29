@@ -4723,9 +4723,9 @@ unplugin@^0.7.0:
     webpack-virtual-modules "^0.4.3"
 
 unstorage@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/unstorage/-/unstorage-0.5.3.tgz#1982a6745540f8394597a91d42a2f74a13d127cb"
-  integrity sha512-NbdbNgZ6Sq6isG+E0bP29YnwkJBJflwR3SUkcizPRiVS5dgc7nUxKaWa/Mp3oEEq6Pjxzj0HxKjjnRvfALKzeA==
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/unstorage/-/unstorage-0.5.4.tgz#7d49047228e2a406625412a8fcfa6e7d3d583f38"
+  integrity sha512-yihAdJiYzkmwJGBO9IV7XIlc9NpCBHlT9ZJxlMmPj+8uqkYvCkwwBO/c98+JCDLkmmdUPS0hnstl+q5bALsS+Q==
   dependencies:
     anymatch "^3.1.2"
     chokidar "^3.5.3"
