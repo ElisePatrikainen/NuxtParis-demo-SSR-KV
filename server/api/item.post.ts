@@ -1,4 +1,3 @@
-import storage from '../../services/storage'
 
 export default defineEventHandler(async (event) => {
   const body = await useBody(event)
@@ -8,7 +7,8 @@ export default defineEventHandler(async (event) => {
     body
   }
 
-  await storage.setItem(`items:${item.id}`, item)
+  const storage = useStorage()
+  await storage.setItem(`db:items:${item.id}`, item)
 
   return {
     status: 201,
