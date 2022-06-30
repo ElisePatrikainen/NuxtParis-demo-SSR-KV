@@ -1,7 +1,7 @@
-import storage from '../../services/storage'
-
 export default defineEventHandler(async () => {
-  const itemsKeys = await storage.getKeys('items')
+  const storage = useStorage()
+
+  const itemsKeys = await storage.getKeys('db:items')
 
   const itemsP = itemsKeys.map(key => storage.getItem(key).then(item => item.body))
 
