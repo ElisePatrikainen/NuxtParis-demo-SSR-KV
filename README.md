@@ -1,4 +1,6 @@
-# KV Todo app
+# KV app
+
+Un exemple d'application utilisant les Cloudflare KV workers.
 
 ## Setup
 
@@ -19,9 +21,3 @@
 ## Ship
 
 - `npx @cloudflare/wrangler publish`
-
-## Unstorage bug workaround
-
-Tant que ce [bug fix](https://github.com/unjs/unstorage/pull/64) n'est pas passé, tu peux faire ça avant le `yarn build:cloudflare` :
-
-Dans `/node_modules/unstorage/dist/drivers/cloudflare-kv-binding.mjs`, remplace la ligne 5 par `const kvList = await binding.list({prefix: base})`
